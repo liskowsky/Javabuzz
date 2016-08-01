@@ -29,8 +29,28 @@ describe('Javabuzz',function() {
     });
   });
   describe('knows when a number is NOT',function() {
-    it('devisible by 15',function() {
+    it('divisible by 15',function() {
       expect(javabuzz.isDivisibleByFifteen(13)).toBe(false);
+    });
+  });
+  describe('returns "Java" when the number is', function(){
+    it('divisible by 3', function(){
+      expect(javabuzz.says(3)).toEqual("Java");
+    });
+  });
+  describe('returns "Buzz" when the nubmer is', function(){
+    it('divisible by 5', function(){
+      expect(javabuzz.says(5)).toEqual("Buzz");
+    });
+  });
+  describe('returns "JavaBuzz" when the number is', function(){
+    it('divisible by 15', function(){
+      expect(javabuzz.says(15)).toEqual("JavaBuzz");
+    });
+  });
+  describe('returns "number" when the number is not', function(){
+    it("divisible by 3,5 or 15", function(){
+      expect(javabuzz.says(19)).toEqual(19);
     });
   });
 });
